@@ -16,7 +16,7 @@ body {
   height: auto;
   background: linear-gradient(0deg, #000000, #000000), #000000;
   border-radius: 10px;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .search-box {
@@ -35,7 +35,7 @@ form {
 }
 
 input[type="text"] {
-  width: 620px;
+  margin: 0 auto;
   color: #ffffff;
   padding: 25px;
   border: none;
@@ -47,7 +47,7 @@ input[type="text"] {
 
 button[type="submit"] {
   position: absolute;
-  margin-left: 400px;
+  margin-left: 470px;
   padding: 10px;
   border: none;
   border-radius: 100%;
