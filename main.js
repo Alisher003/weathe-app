@@ -1,10 +1,9 @@
 const search = document.querySelector('.search-btn');
 
-
-search.addEventListener('click', () => {
-
-  const APIKey = '728b0ee6df5687559812bd3169ad77b7';
-  const city = document.querySelector('.search-box input').value;
+search.addEventListener('click', (evt) => {
+evt.preventDefault()
+  const APIKey = 'fca39815ffe5e1bbcc6cd46ab69797ae ';
+  const city =  document.querySelector('.search-input').value;
 
   if (city === '')
       return;
@@ -14,35 +13,18 @@ search.addEventListener('click', () => {
       .then(json => {
 
           if (json.cod === '404') {
-              container.style.height = '400px';
-              weatherBox.style.display = 'none';
-              weatherDetails.style.display = 'none';
-              error404.style.display = 'block';
-              error404.classList.add('fadeIn');
               return;
           }
 
-          error404.style.display = 'none';
-          error404.classList.remove('fadeIn');
+          const temperature = document.querySelector('#temperature');
+          const City = document.querySelector('#City');
+          const humidity = document.querySelector('#humidity');
+          const wind = document.querySelector('#wind');
 
-          const image = document.querySelector('.weather-box img');
-          const temperature = document.querySelector('.weather-box .temperature');
-          const description = document.querySelector('.weather-box .description');
-          const humidity = document.querySelector('.weather-details .humidity span');
-          const wind = document.querySelector('.weather-details .wind span');
-
-
+          City.innerHTML = city
           temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
-          description.innerHTML = `${json.weather[0].description}`;
           humidity.innerHTML = `${json.main.humidity}%`;
           wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
-
-          weatherBox.style.display = '';
-          weatherDetails.style.display = '';
-          weatherBox.classList.add('fadeIn');
-          weatherDetails.classList.add('fadeIn');
-          container.style.height = '590px';
-
 
       });
 
