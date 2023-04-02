@@ -23,7 +23,7 @@ search.addEventListener("click", (evt) => {
       const wind = document.querySelector("#wind");
 
       City.innerHTML = city;
-      temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+      temperature.innerHTML = `${parseInt(json.main.temp)}<span> °C</span>`;
       humidity.innerHTML = `${json.main.humidity}%`;
       wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
       
