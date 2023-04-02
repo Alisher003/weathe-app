@@ -11,22 +11,37 @@
   
   <div class="container">
     <div class="wether"> 
-     <h1>Weather App</h1>
      <form>
       <div class="search-box">
-        <input  type="text" placeholder="Enter city name" class="search-input">
+        <input  type="text" placeholder="Search" class="search-input">
         <button class="search-btn" type="submit">
           <img src="./img/search.svg" alt="">
         </button>
       </div>
     </form>
     <div class="weather-details">
-      <h2 id="City">City Name</h2>
-      <p>Temperature: <span id="temperature"></span></p>
-      <p>humidity: <span id="humidity"></span></p>
-      <p>wind: <span id="wind"></span></p>
+      <h2 id="City"></h2>
+      <p><span id="temperature"></span></p>
+      <p><span id="humidity"></span></p>
+      <p><span id="wind"></span></p>
+
+      <ul class="ul-link"">
+        <li class="box-link">
+          <img class="box-img" src="./img/facebok.svg" alt="">
+        </li>
+        <li class="box-link">
+          <img class="box-img" src="./img/twiter.svg" alt="">
+        </li>
+        <li class="box-link">
+          <img class="box-img" src="./img/linkidin.svg" alt="">
+        </li>
+        <li class="box-link">
+          <img class="box-img" src="./img/instagram.svg" alt="">
+        </li>
+      </ul>
     </div>
    </div>
+
   </div>
 
   <script src="./main.js"></script>
