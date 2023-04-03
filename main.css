@@ -39,6 +39,7 @@ input[type="text"] {
   margin: 0 auto;
   color: #ffffff;
   padding: 17px;
+  outline: none;
   border: none;
   border-radius: 55px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #585858;
